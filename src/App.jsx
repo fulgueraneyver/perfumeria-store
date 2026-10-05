@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import LoginAdmin from "./pages/LoginAdmin";
@@ -7,7 +7,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
     return (
-        <BrowserRouter basename="/perfumeria-store">
+        <HashRouter>
             <Routes>
 
                 <Route
@@ -30,7 +30,7 @@ function App() {
                 />
 
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
