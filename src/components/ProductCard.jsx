@@ -22,9 +22,9 @@ function ProductCard({perfume}) {
                         {perfume.categoria}
                     </p>
 
-                    <Button variant="dark">
+                    {/*<Button variant="dark">
                         Comprar
-                    </Button>
+                    </Button>*/}
                 </Card.Body>
             </Card>
         );

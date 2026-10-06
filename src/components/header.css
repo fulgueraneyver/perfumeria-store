@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    height: 100px;
+    background: white;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cart-icon {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-logo {
+    height: 85px;
+    width: auto;
+}

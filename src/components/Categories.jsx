@@ -1,10 +1,10 @@
 const categorias = [
     "Inicio",
-    "Arabes Hombre",
+    /*"Arabes Hombre",
     "Arabes Mujer",
     "Diseñador Hombre",
     "Diseñador Mujer",
-    "Perfumes Nicho"
+    "Perfumes Nicho"*/
 ];
 
 function Categories() {
