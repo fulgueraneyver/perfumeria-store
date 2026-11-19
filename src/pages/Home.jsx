@@ -41,6 +41,11 @@ function Home() {
         )
         : productos;
 
+    const tituloSeccion =
+        categoriaSeleccionada === ""
+            ? "Todos los Productos"
+            : categoriaSeleccionada;
+
     return (
         <>
             <Header/>
@@ -53,7 +58,7 @@ function Home() {
             />
 
             <ProductSection
-                titulo="Nuestros Perfumes"
+                titulo={tituloSeccion}
                 productos={productosFiltrados}
             />
         </>
