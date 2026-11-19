@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Header from "../components/Header";
 import HeroBanner from "../components/HeroBanner";
 import Categories from "../components/Categories";
 import ProductSection from "../components/ProductSection";
-import { perfumes } from "../data/perfumes";
-import { db } from "../firebase";
+import {perfumes} from "../data/perfumes";
+import {db} from "../firebase";
 import {
     collection,
     getDocs
@@ -13,6 +13,7 @@ import {
 function Home() {
     const [productos, setProductos] =
         useState([]);
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
 
     useEffect(() => {
 
@@ -33,21 +34,30 @@ function Home() {
 
         setProductos(lista);
     };
+
+    const productosFiltrados = categoriaSeleccionada
+        ? productos.filter(
+            p => p.categoria === categoriaSeleccionada
+        )
+        : productos;
+
     return (
         <>
-            <Header />
+            <Header/>
 
-            <HeroBanner />
+            <HeroBanner/>
 
-            <Categories />
+            <Categories
+                categoriaSeleccionada={categoriaSeleccionada}
+                setCategoriaSeleccionada={setCategoriaSeleccionada}
+            />
 
             <ProductSection
                 titulo="Nuestros Perfumes"
-                productos={productos}
+                productos={productosFiltrados}
             />
         </>
     );
 }
 
 export default Home;
-``

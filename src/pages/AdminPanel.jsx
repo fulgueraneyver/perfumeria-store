@@ -218,13 +218,25 @@ function AdminPanel() {
 
                 <div className="mb-3">
                     <label>Categoría</label>
-                    <input
-                        type="text"
-                        className="form-control"
+
+                    <select
+                        className="form-select"
                         name="categoria"
                         value={form.categoria}
                         onChange={handleChange}
-                    />
+                    >
+                        <option value="">
+                            Seleccione una categoría
+                        </option>
+
+                        <option value="Perfumes">
+                            Perfumes
+                        </option>
+
+                        <option value="Lentes">
+                            Lentes
+                        </option>
+                    </select>
                 </div>
 
                 <div className="mb-3">
